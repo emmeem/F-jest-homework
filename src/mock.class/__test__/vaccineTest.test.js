@@ -2,12 +2,16 @@ import VaccineTest from "../vaccineTest";
 import Recipient from "../recipient";
 import Covid19Vaccine from "../covid19Vaccine";
 
+const mockAcceptInjection = jest.fn();
+
 jest.mock("../recipient", () => {
   // mock class实现
 });
 
 beforeEach(() => {
   // clear mock here
+  Recipient.mockClear();
+  mockAcceptInjection.mockClear();
 });
 
 describe("inject", () => {
