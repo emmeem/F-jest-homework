@@ -10,8 +10,8 @@ describe("register", () => {
     const username = "mocked username";
     const password = "mocked password";
     const result = register(username, password);
-   
-    await expect(result).resolves.toEqual({})
+
+    await expect(result).resolves.toEqual({});
   });
 
   test("should reject with Error when username is invalid", async () => {
@@ -22,6 +22,6 @@ describe("register", () => {
 
     const result = register(username, password);
 
-    await expect(result).rejects.toThrowError("wrong username or password")
+    await expect(result).rejects.toThrowError("wrong username or password");
   });
 });
